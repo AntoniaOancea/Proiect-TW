@@ -5,22 +5,61 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Magazin</title>
+    <link rel="stylesheet" type="text/css" href="magazin.css">
+    <script src="magazin.js"></script>
 </head>
 <body>
     <header>
-        Bine ati venit!
+        <div class="user-bar">
+            <span class="message"></span>
+            <button id="changeDetails"></button>
+        </div>
+        
+        <button id="removeDetails">Șterge detaliile</button>
+        <button id="refresh">Refresh</button>
     </header>
-    <h1>Livrari la domiciliu</h1>
+    <ul class="start">
+        <div><img src="https://www.impact.ro/wp-content/uploads/2021/05/mb02-1024x849-1.jpg"></div>
+        <div><h1>Magazin</h1></div>
+        <div><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJhOe9zwrztCq67bLWf_1LHk3oEuvsrZpNrg&usqp=CAU"></div>
+    </ul>
     <h3>
-        Alege ce vrei si noi iti livram la usa!!
+        Pregateste-ti lista de cumparaturi de acasa!
     </h3>
+    <ul class="meniu">
+        <div id="Meniu"><h1>Categorii</h1>
+            <ul class="submeniu">
+                <li><a href="#Papetarie">Papetarie</a></li>
+                <li><a href="#Jocuri">Jocuri & Jucarii</a></li>
+                <li><a href="#Sport">Sport</a></li>
+                <li><a href="#Imbracaminte">Imbracaminte & Incaltaminte</a></li>
+                <li><a href="#Casa">Casa & Gradina</a></li>
+                <li><a href="#Petshop">Petshop</a></li>
+                <li><a href="#Electronice">Electronice & Electocasnice</a></li>
+            </ul>
+        </div> 
+        <div><a href="#lista"><h1>Lista de cumparaturi</h1></a></div> 
+    </ul>
+    <ul>
+        <li id="Papetarie">Papetarie</li>
+        <li id="Jocuri & Jucarii">Jocuri & Jucarii</li>
+        <li id="Sport">Sport</li>
+        <li id="Imbracaminte">Imbracaminte & Incaltaminte</li>
+        <li id="Casa">Casa & Gradina</li>
+        <li id="Petshop">Petshop</li>
+        <li id="Electronice">Electronice & Electocasnice</li>
+    </ul>
+    <ul class="lista">
+        <button id="deleteList">Sterge lista</button>
+        <button id="deleteElement">Sterge produsul din lista</button>
+    </ul>
 
-
-
-
+    <div id="lista">
+        <h2>Lista de cumparaturi</h2>        
+    </div>
 
     <footer>
-        Multumim!
+        Te asteptam in magazin!
     </footer>
 </body>
 </html>

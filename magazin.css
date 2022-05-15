@@ -1,0 +1,77 @@
+body{background-color: lightcyan;}
+header {
+    margin: 0;
+  }
+  .user-bar {
+    background: lightcoral;
+    display: flex;
+    padding: 12px;
+    margin-bottom: 12px;
+  }
+
+  .user-bar .message {
+    flex: 1;
+    min-width: 0;
+  }
+.start
+{
+    background-color: lightcoral;
+    display: flex;
+    height:100px;
+}
+.start img
+{
+    height: 100px;
+    width: 20vh;
+}
+.start div:nth-child(1)
+{
+    height: 10vh;
+    padding-left: 10vw;
+    flex: 1;
+}
+.start div:nth-child(2)
+{
+    padding-left: 10vw;
+    padding-right: 10vw;
+    flex: 2;
+}
+.start div:nth-child(3)
+{
+    height: 10vh;
+    padding-right: 10vw;
+    flex: 1;
+}
+.meniu
+{
+    background-color: lightcoral;
+    display: flex;
+    height:100px;
+}
+.meniu div
+{
+    height: 100%;
+    padding-right: 10vw;
+    align-items: flex-start;
+    flex: 1;
+    color: black;
+}
+.meniu.submeniu
+{
+
+    padding-right: 10vw;
+    align-items: flex-start;
+    flex: 1;
+    color: darkblue;
+}
+.meniu button
+{
+    height: 100%; 
+    flex: 2;
+    align-items: flex-end;
+}
+.meniu div.submeniu
+{
+    display: none;
+}
+
