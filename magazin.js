@@ -1,5 +1,5 @@
 window.onload = () => {
-    const barButton = document.querySelector('.user-bar #changeDetails');
+    const barButton = document.querySelector('#changeDetails');
     const removeButton = document.querySelector('#removeDetails');
     const refreshButton = document.getElementById('refresh');
     barButton.addEventListener('click', changeDetails);
@@ -12,7 +12,7 @@ window.onload = () => {
   
   function renderBar() {
     const barMessage = document.querySelector('.user-bar .message');
-    const barButton = document.querySelector('.user-bar #changeDetails');
+    const barButton = document.querySelector('#changeDetails');
     let userDetails = null;
     try {
       userDetails = JSON.parse(localStorage.getItem('userDetails'));

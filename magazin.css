@@ -3,7 +3,6 @@ header {
     margin: 0;
   }
   .user-bar {
-    background: lightcoral;
     display: flex;
     padding: 12px;
     margin-bottom: 12px;
@@ -12,7 +11,11 @@ header {
   .user-bar .message {
     flex: 1;
     min-width: 0;
+    position: fixed;
+    background-color: lightcoral;
   }
+
+
 .start
 {
     background-color: lightcoral;
@@ -42,13 +45,15 @@ header {
     padding-right: 10vw;
     flex: 1;
 }
+
+
 .meniu
 {
     background-color: lightcoral;
     display: flex;
-    height:100px;
+    height:150px;
 }
-.meniu div
+.meniu.categorii
 {
     height: 100%;
     padding-right: 10vw;
@@ -56,22 +61,52 @@ header {
     flex: 1;
     color: black;
 }
-.meniu.submeniu
+.meniu.categorii.submeniu
 {
-
     padding-right: 10vw;
     align-items: flex-start;
     flex: 1;
     color: darkblue;
 }
-.meniu button
+.meniu div 
 {
     height: 100%; 
     flex: 2;
     align-items: flex-end;
 }
-.meniu div.submeniu
+
+.meniu.categorii
+{
+    position: relative;
+    display: inline-block;
+}
+.meniu.categorii.submeniu
 {
     display: none;
+    position: absolute;
+}
+.meniu.categorii:hover .submeniu
+{
+    display: block;
 }
 
+.meniu{
+    cursor: pointer;
+    transition: 1s;
+}
+.meniu:hover{
+    background-color: lightgreen;
+}
+
+
+@keyframes rotation {
+    0%{transform:rotate(0deg);}
+    100%{transform:rotate(360deg);}
+}
+#titlu {
+    animation: rotation 3s linear 0s 1;
+  }
+
+@media screen {
+   * { font-family: sans-serif }
+}

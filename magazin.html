@@ -12,22 +12,21 @@
     <header>
         <div class="user-bar">
             <span class="message"></span>
-            <button id="changeDetails"></button>
         </div>
-        
+        <button id="changeDetails">Adauga detalii</button>
         <button id="removeDetails">Șterge detaliile</button>
         <button id="refresh">Refresh</button>
     </header>
     <ul class="start">
         <div><img src="https://www.impact.ro/wp-content/uploads/2021/05/mb02-1024x849-1.jpg"></div>
-        <div><h1>Magazin</h1></div>
+        <div id="titlu"><h1>Magazin</h1></div>
         <div><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJhOe9zwrztCq67bLWf_1LHk3oEuvsrZpNrg&usqp=CAU"></div>
     </ul>
     <h3>
         Pregateste-ti lista de cumparaturi de acasa!
     </h3>
     <ul class="meniu">
-        <div id="Meniu"><h1>Categorii</h1>
+        <div id="categorii">Categorii
             <ul class="submeniu">
                 <li><a href="#Papetarie">Papetarie</a></li>
                 <li><a href="#Jocuri">Jocuri & Jucarii</a></li>
@@ -49,17 +48,208 @@
         <li id="Petshop">Petshop</li>
         <li id="Electronice">Electronice & Electocasnice</li>
     </ul>
+
+    <div id="lista">
+        <h2>Lista de cumparaturi</h2>      
+    </div>
+    <button class="print" onclick="window.print()">Imprimare</button>
+    
     <ul class="lista">
         <button id="deleteList">Sterge lista</button>
         <button id="deleteElement">Sterge produsul din lista</button>
     </ul>
 
-    <div id="lista">
-        <h2>Lista de cumparaturi</h2>        
+    <div id="comentarii">
+        <h2>Comentarii</h2>
     </div>
-
     <footer>
         Te asteptam in magazin!
     </footer>
+    <p>
+        he logical NOT can be expressed through the ‘not’ keyword. The presence of the keyword ‘not’ at the beginning of the media query negates the result. I.e., if the media query had been true without the ‘not’ keyword it will become false, and vice versa. User agents that only support media types (as described in HTML4) will not recognize the ‘not’ keyword and the associated style sheet is therefore not applied.
+
+<link rel="stylesheet" media="not screen and (color)" href="example.css" />
+The keyword ‘only’ can also be used to hide style sheets from older user agents. User agents must process media queries starting with ‘only’ as if the ‘only’ keyword was not present.
+
+<link rel="stylesheet" media="only screen and (color)" href="example.css" />
+The media queries syntax can be used with HTML, XHTML, XML [XMLSTYLE] and the @import and @media rules of CSS.
+
+Here is the same example written in HTML, XHTML, XML, @import and @media:
+
+<link media="screen and (color), projection and (color)" rel="stylesheet" href="example.css">
+<link media="screen and (color), projection and (color)" rel="stylesheet" href="example.css" />
+<?xml-stylesheet media="screen and (color), projection and (color)" rel="stylesheet" href="example.css" ?>
+@import url(example.css) screen and (color), projection and (color);
+@media screen and (color), projection and (color) { … }
+The [XMLSTYLE] specification has not yet been updated to use media queries in the media pseudo-attribute.
+
+If a media feature does not apply to the device where the UA is running, expressions involving the media feature will be false.
+
+The media feature ‘device-aspect-ratio’ only applies to visual devices. On an aural device, expressions involving ‘device-aspect-ratio’ will therefore always be false:
+
+<link rel="stylesheet" media="aural and (device-aspect-ratio: 16/9)" href="example.css" />
+Expressions will always be false if the unit of measurement does not apply to the device.
+
+The ‘px’ unit does not apply to ‘speech’ devices so the following media query is always false:
+
+<link rel="stylesheet" media="speech and (min-device-width: 800px)" href="example.css" />
+Note that the media queries in this example would have been true if the keyword ‘not’ had been added to the beginning of the media query.
+
+To avoid circular dependencies, unless another feature explicitly specifies that it affects the resolution of Media Queries, it is not necessary to apply the style sheet in order to evaluate expressions. For example, the aspect ratio of a printed document may be influenced by a style sheet, but expressions involving ‘device-aspect-ratio’ will be based on the default aspect ratio of the user agent.
+
+User agents are expected, but not required, to re-evaluate and re-layout the page in response to changes in the user environment, for example if the device is tilted from landscape to portrait mode.
+
+3. Syntax
+The media query syntax is described in terms of the CSS2 grammar. As such, rules not defined here are defined in CSS2. The media_query_list production defined below replaces the media_list production from CSS2. [CSS21]
+
+media_query_list
+ : S* [media_query [ ',' S* media_query ]* ]?
+ ;
+media_query
+ : [ONLY | NOT]? S* media_type S* [ AND S* expression ]*
+ | expression [ AND S* expression ]*
+ ;
+media_type
+ : IDENT
+ ;
+expression
+ : '(' S* media_feature S* [ ':' S* expr ]? ')' S*
+ ;
+media_feature
+ : IDENT
+ ;
+COMMENT tokens, as defined by CSS2, do not occur in the grammar (to keep it readable), but any number of these tokens may appear anywhere between other tokens. [CSS21]
+
+The following new definitions are introduced:
+
+L  l|\\0{0,4}(4c|6c)(\r\n|[ \t\r\n\f])?|\\l
+Y  y|\\0{0,4}(59|79)(\r\n|[ \t\r\n\f])?|\\y
+The following new tokens are introduced:
+
+{O}{N}{L}{Y}      {return ONLY;}
+{N}{O}{T}         {return NOT;}he logical NOT can be expressed through the ‘not’ keyword. The presence of the keyword ‘not’ at the beginning of the media query negates the result. I.e., if the media query had been true without the ‘not’ keyword it will become false, and vice versa. User agents that only support media types (as described in HTML4) will not recognize the ‘not’ keyword and the associated style sheet is therefore not applied.
+
+<link rel="stylesheet" media="not screen and (color)" href="example.css" />
+The keyword ‘only’ can also be used to hide style sheets from older user agents. User agents must process media queries starting with ‘only’ as if the ‘only’ keyword was not present.
+
+<link rel="stylesheet" media="only screen and (color)" href="example.css" />
+The media queries syntax can be used with HTML, XHTML, XML [XMLSTYLE] and the @import and @media rules of CSS.
+
+Here is the same example written in HTML, XHTML, XML, @import and @media:
+
+<link media="screen and (color), projection and (color)" rel="stylesheet" href="example.css">
+<link media="screen and (color), projection and (color)" rel="stylesheet" href="example.css" />
+<?xml-stylesheet media="screen and (color), projection and (color)" rel="stylesheet" href="example.css" ?>
+@import url(example.css) screen and (color), projection and (color);
+@media screen and (color), projection and (color) { … }
+The [XMLSTYLE] specification has not yet been updated to use media queries in the media pseudo-attribute.
+
+If a media feature does not apply to the device where the UA is running, expressions involving the media feature will be false.
+
+The media feature ‘device-aspect-ratio’ only applies to visual devices. On an aural device, expressions involving ‘device-aspect-ratio’ will therefore always be false:
+
+<link rel="stylesheet" media="aural and (device-aspect-ratio: 16/9)" href="example.css" />
+Expressions will always be false if the unit of measurement does not apply to the device.
+
+The ‘px’ unit does not apply to ‘speech’ devices so the following media query is always false:
+
+<link rel="stylesheet" media="speech and (min-device-width: 800px)" href="example.css" />
+Note that the media queries in this example would have been true if the keyword ‘not’ had been added to the beginning of the media query.
+
+To avoid circular dependencies, unless another feature explicitly specifies that it affects the resolution of Media Queries, it is not necessary to apply the style sheet in order to evaluate expressions. For example, the aspect ratio of a printed document may be influenced by a style sheet, but expressions involving ‘device-aspect-ratio’ will be based on the default aspect ratio of the user agent.
+
+User agents are expected, but not required, to re-evaluate and re-layout the page in response to changes in the user environment, for example if the device is tilted from landscape to portrait mode.
+
+3. Syntax
+The media query syntax is described in terms of the CSS2 grammar. As such, rules not defined here are defined in CSS2. The media_query_list production defined below replaces the media_list production from CSS2. [CSS21]
+
+media_query_list
+ : S* [media_query [ ',' S* media_query ]* ]?
+ ;
+media_query
+ : [ONLY | NOT]? S* media_type S* [ AND S* expression ]*
+ | expression [ AND S* expression ]*
+ ;
+media_type
+ : IDENT
+ ;
+expression
+ : '(' S* media_feature S* [ ':' S* expr ]? ')' S*
+ ;
+media_feature
+ : IDENT
+ ;
+COMMENT tokens, as defined by CSS2, do not occur in the grammar (to keep it readable), but any number of these tokens may appear anywhere between other tokens. [CSS21]
+
+The following new definitions are introduced:
+
+L  l|\\0{0,4}(4c|6c)(\r\n|[ \t\r\n\f])?|\\l
+Y  y|\\0{0,4}(59|79)(\r\n|[ \t\r\n\f])?|\\y
+The following new tokens are introduced:
+
+{O}{N}{L}{Y}      {return ONLY;}
+{N}{O}{T}         {return NOT;}he logical NOT can be expressed through the ‘not’ keyword. The presence of the keyword ‘not’ at the beginning of the media query negates the result. I.e., if the media query had been true without the ‘not’ keyword it will become false, and vice versa. User agents that only support media types (as described in HTML4) will not recognize the ‘not’ keyword and the associated style sheet is therefore not applied.
+
+<link rel="stylesheet" media="not screen and (color)" href="example.css" />
+The keyword ‘only’ can also be used to hide style sheets from older user agents. User agents must process media queries starting with ‘only’ as if the ‘only’ keyword was not present.
+
+<link rel="stylesheet" media="only screen and (color)" href="example.css" />
+The media queries syntax can be used with HTML, XHTML, XML [XMLSTYLE] and the @import and @media rules of CSS.
+
+Here is the same example written in HTML, XHTML, XML, @import and @media:
+
+<link media="screen and (color), projection and (color)" rel="stylesheet" href="example.css">
+<link media="screen and (color), projection and (color)" rel="stylesheet" href="example.css" />
+<?xml-stylesheet media="screen and (color), projection and (color)" rel="stylesheet" href="example.css" ?>
+@import url(example.css) screen and (color), projection and (color);
+@media screen and (color), projection and (color) { … }
+The [XMLSTYLE] specification has not yet been updated to use media queries in the media pseudo-attribute.
+
+If a media feature does not apply to the device where the UA is running, expressions involving the media feature will be false.
+
+The media feature ‘device-aspect-ratio’ only applies to visual devices. On an aural device, expressions involving ‘device-aspect-ratio’ will therefore always be false:
+
+<link rel="stylesheet" media="aural and (device-aspect-ratio: 16/9)" href="example.css" />
+Expressions will always be false if the unit of measurement does not apply to the device.
+
+The ‘px’ unit does not apply to ‘speech’ devices so the following media query is always false:
+
+<link rel="stylesheet" media="speech and (min-device-width: 800px)" href="example.css" />
+Note that the media queries in this example would have been true if the keyword ‘not’ had been added to the beginning of the media query.
+
+To avoid circular dependencies, unless another feature explicitly specifies that it affects the resolution of Media Queries, it is not necessary to apply the style sheet in order to evaluate expressions. For example, the aspect ratio of a printed document may be influenced by a style sheet, but expressions involving ‘device-aspect-ratio’ will be based on the default aspect ratio of the user agent.
+
+User agents are expected, but not required, to re-evaluate and re-layout the page in response to changes in the user environment, for example if the device is tilted from landscape to portrait mode.
+
+3. Syntax
+The media query syntax is described in terms of the CSS2 grammar. As such, rules not defined here are defined in CSS2. The media_query_list production defined below replaces the media_list production from CSS2. [CSS21]
+
+media_query_list
+ : S* [media_query [ ',' S* media_query ]* ]?
+ ;
+media_query
+ : [ONLY | NOT]? S* media_type S* [ AND S* expression ]*
+ | expression [ AND S* expression ]*
+ ;
+media_type
+ : IDENT
+ ;
+expression
+ : '(' S* media_feature S* [ ':' S* expr ]? ')' S*
+ ;
+media_feature
+ : IDENT
+ ;
+COMMENT tokens, as defined by CSS2, do not occur in the grammar (to keep it readable), but any number of these tokens may appear anywhere between other tokens. [CSS21]
+
+The following new definitions are introduced:
+
+L  l|\\0{0,4}(4c|6c)(\r\n|[ \t\r\n\f])?|\\l
+Y  y|\\0{0,4}(59|79)(\r\n|[ \t\r\n\f])?|\\y
+The following new tokens are introduced:
+
+{O}{N}{L}{Y}      {return ONLY;}
+{N}{O}{T}         {return NOT;}
+    </p>
 </body>
 </html>
