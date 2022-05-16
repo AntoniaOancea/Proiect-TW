@@ -8,7 +8,7 @@
     <link rel="stylesheet" type="text/css" href="magazin.css">
     <script src="magazin.js"></script>
 </head>
-<body>
+<body >
     <header>
         <div class="user-bar">
             <span class="message"></span>
@@ -17,36 +17,37 @@
         <button id="removeDetails">Șterge detaliile</button>
         <button id="refresh">Refresh</button>
     </header>
+    <div>
+      </div>
+      <p></p>
     <ul class="start">
         <div><img src="https://www.impact.ro/wp-content/uploads/2021/05/mb02-1024x849-1.jpg"></div>
         <div id="titlu"><h1>Magazin</h1></div>
         <div><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJhOe9zwrztCq67bLWf_1LHk3oEuvsrZpNrg&usqp=CAU"></div>
     </ul>
     <h3>
-        Pregateste-ti lista de cumparaturi de acasa!
+        Pregateste lista de cumparaturi de acasa!
     </h3>
     <ul class="meniu">
         <div id="categorii">Categorii
             <ul class="submeniu">
-                <li><a href="#Papetarie">Papetarie</a></li>
                 <li><a href="#Jocuri">Jocuri & Jucarii</a></li>
                 <li><a href="#Sport">Sport</a></li>
-                <li><a href="#Imbracaminte">Imbracaminte & Incaltaminte</a></li>
                 <li><a href="#Casa">Casa & Gradina</a></li>
-                <li><a href="#Petshop">Petshop</a></li>
-                <li><a href="#Electronice">Electronice & Electocasnice</a></li>
             </ul>
         </div> 
         <div><a href="#lista"><h1>Lista de cumparaturi</h1></a></div> 
     </ul>
     <ul>
-        <li id="Papetarie">Papetarie</li>
         <li id="Jocuri & Jucarii">Jocuri & Jucarii</li>
+        <button id="add">Vezi mai mult</button>
+        <button id="delete">Vezi mai putin</button>
         <li id="Sport">Sport</li>
-        <li id="Imbracaminte">Imbracaminte & Incaltaminte</li>
+        <button id="add">Vezi mai mult</button>
+        <button id="delete">Vezi mai putin</button>
         <li id="Casa">Casa & Gradina</li>
-        <li id="Petshop">Petshop</li>
-        <li id="Electronice">Electronice & Electocasnice</li>
+        <button id="add">Vezi mai mult</button>
+        <button id="delete">Vezi mai putin</button>
     </ul>
 
     <div id="lista">
@@ -55,16 +56,21 @@
     <button class="print" onclick="window.print()">Imprimare</button>
     
     <ul class="lista">
-        <button id="deleteList">Sterge lista</button>
-        <button id="deleteElement">Sterge produsul din lista</button>
     </ul>
 
     <div id="comentarii">
-        <h2>Comentarii</h2>
+        <h2>Lasa aici intrebarea ta pentru noi</h2>
+        <form>
+            <input type="text" value="Nume..." name="nume" pattern="[A-Za-z]+"/>
+            <input type="text" value="Comentariul tau..." name="comentariu"/>
+            <input type="submit"/>
+        </form>
     </div>
+    <p id="demo">Ora: </p>
     <footer>
         Te asteptam in magazin!
     </footer>
+    <p>Tab</p>
     <p>
         he logical NOT can be expressed through the ‘not’ keyword. The presence of the keyword ‘not’ at the beginning of the media query negates the result. I.e., if the media query had been true without the ‘not’ keyword it will become false, and vice versa. User agents that only support media types (as described in HTML4) will not recognize the ‘not’ keyword and the associated style sheet is therefore not applied.
 

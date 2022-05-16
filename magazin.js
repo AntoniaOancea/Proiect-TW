@@ -1,4 +1,5 @@
 window.onload = () => {
+    startTime();
     const barButton = document.querySelector('#changeDetails');
     const removeButton = document.querySelector('#removeDetails');
     const refreshButton = document.getElementById('refresh');
@@ -8,6 +9,13 @@ window.onload = () => {
       window.location.reload();
     });
     renderBar();
+    
+    toggleInterval();
+    document.querySelector('button #timer').addEventListener('click', toggleInterval);
+
+
+    document.getElementById('submeniu')
+    .addEventListener('focus', consoleLogFocus);
   }
   
   function renderBar() {
@@ -40,3 +48,31 @@ window.onload = () => {
     localStorage.removeItem('userDetails');
     renderBar();
   }
+
+
+
+
+
+let seconds = 0;
+let intervalId = null;
+
+function toggleInterval() {
+  const stop = intervalId != null;
+    intervalId = setInterval(() => {
+      seconds++;
+      document.querySelector('p').textContent = `Stai pe această pagină de ${seconds} secunde.`;
+    }, 1000);
+}
+
+function startTime() {
+  const date = new Date();
+  document.getElementById("demo").innerHTML = date.toLocaleTimeString();
+  setTimeout(function() {startTime()}, 1000);
+}
+
+
+
+function consoleLogFocus(event) {
+  const content = event.target.firstChild.textContent.trim();
+  console.log(`S-a focusat elementul cu textul '${content}'`);
+}
