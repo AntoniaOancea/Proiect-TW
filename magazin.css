@@ -118,3 +118,53 @@ input {
   input:not([type="radio"]):not([type="checkbox"]) {
     display: block;
   }
+
+
+.actions{
+    display: flex;
+}
+
+.actions button:not(:last-child){
+    margin-right: 4px;
+}
+
+.new-game{
+    border:2px solid;
+    margin:0.5rem;
+    padding: 0.5rem;
+    display: flex;
+}
+.new-game img{
+    height: 100%;
+    max-width: 7rem;
+}
+.new-game .content{
+    flex:1;
+    margin-left:1rem;
+}
+.new-game .content h1{
+    font-size:1.2rem;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+.new-game .content p{
+    font-size:1rem;
+    margin:0.5rem 0;
+}
+
+#produse img
+{
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    width: 300px;
+}
+#produse div
+{
+    font-size: 1cm;
+}
+#produse li
+{
+    font-size: 2cm;
+    color: red;
+}

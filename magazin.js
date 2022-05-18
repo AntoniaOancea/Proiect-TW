@@ -44,6 +44,15 @@ window.onload = () => {
   function addJocuri(){
     const product=jocuri[newIndex];
     const newElement=document.createElement('div');
+    articleElement.classList.add('new-game');
+    const articleContent=document.createElement=document.createElement('div');
+    const h1=document.createElement('h1');
+    h1.textContent=newElement.title;
+    const img=createElement('img');
+    img.src=newElement.image;
+    articleElement.append(img);
+    document.querySelector('#Jocuri').append(articleElement);
+    newIndex=(newIndex+1)%jocuri.length;
   }
   
 
